@@ -1,9 +1,9 @@
 import React from 'react'
 
-function navbar() {
+function Navbar() {
   return (
     <div>This is admin navbar</div>
   )
 }
 
-export default navbar
+export default Navbar

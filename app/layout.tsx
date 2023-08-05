@@ -5,8 +5,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 // Components
-import AdminNav from "@/components/admin/navbar"
-import HomeNav from "@/components/home/navbar"
+import AdminNav from "@/components/admin/Navbar"
+import HomeNav from "@/components/home/Navbar"
+import Footer from '@/components/home/Footer'
 import { usePathname } from 'next/navigation'
  
 const inter = Inter({ subsets: ['latin'] })
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {pathname === "/admin"? <AdminNav/> : <HomeNav/>}
         <main>{children}</main>
+        <Footer/>
       </body>
     </html>
    

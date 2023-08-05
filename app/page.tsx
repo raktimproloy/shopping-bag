@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Carousel from '@/components/home/home/Carousel'
+
 export default function Page() {
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -112,7 +114,7 @@ export default function Page() {
     //   </div>
     // </main>
     <>
-      This is home page
+      <Carousel/>
     </>
   )
 }
