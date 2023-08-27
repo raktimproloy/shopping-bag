@@ -1,10 +1,10 @@
+import { AuthRequiredError } from '@/lib/exceptions'
+import Home from "@/page/home"
 
-import Image from 'next/image'
-import Link from 'next/link'
 
-import Carousel from '@/components/home/home/Carousel'
-
+const session = null;
 export default function Page() {
+  if(session) throw new AuthRequiredError()
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     //   <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -114,7 +114,7 @@ export default function Page() {
     //   </div>
     // </main>
     <>
-      <Carousel/>
+      <Home/>
     </>
   )
 }

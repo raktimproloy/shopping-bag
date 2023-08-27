@@ -5,10 +5,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 // Components
-import AdminNav from "@/components/admin/Navbar"
-import HomeNav from "@/components/home/Navbar"
-import Footer from '@/components/home/Footer'
+import AdminNav from "@/components/adminPanel/Navbar"
+import HomeNav from "@/components/userPanel/Navbar"
+import Footer from '@/components/userPanel/Footer'
 import { usePathname } from 'next/navigation'
+import Error from 'next/error'
  
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,8 +23,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   const pathname = usePathname()
+
   return (
     <html lang="en">
       <body className={inter.className}>
